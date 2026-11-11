@@ -15,6 +15,7 @@ def mention(moy):
         return "Passable"
     else:
         return "Ajourné"
+    
 
 
 if __name__ == "__main__":
@@ -23,4 +24,3 @@ if __name__ == "__main__":
     print(f"Moyenne : {m}")
     print(f"Mention : {mention(m)}")
 
-    
