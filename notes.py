@@ -22,3 +22,5 @@ if __name__ == "__main__":
     m = moyenne(mes_notes)
     print(f"Moyenne : {m}")
     print(f"Mention : {mention(m)}")
+
+    
