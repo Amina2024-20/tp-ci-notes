@@ -1,26 +1,17 @@
-def moyenne(notes):
-    if len(notes) == 0:
-        return 0
-    return sum(notes) / len(notes)
+from notes import moyenne, mention
 
 
-def mention(moy):
-    if moy >= 16:
-        return "Très bien"
-    elif moy >= 14:
-        return "Bien"
-    elif moy >= 12:
-        return "Assez bien"
-    elif moy >= 10:
-        return "Passable"
-    else:
-        return "Ajourné"
-    
+def test_moyenne():
+    assert moyenne([10, 20]) == 15
 
 
-if __name__ == "__main__":
-    mes_notes = [12, 15, 9, 17]
-    m = moyenne(mes_notes)
-    print(f"Moyenne : {m}")
-    print(f"Mention : {mention(m)}")
+def test_moyenne_liste_vide():
+    assert moyenne([]) == 0
 
+
+def test_mention_bien():
+    assert mention(15) == "Bien"
+
+
+def test_mention_ajourne():
+    assert mention(8) == "Ajourné"
